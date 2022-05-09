@@ -90,7 +90,8 @@ class Location implements EncodableUrlPart, GeocodedLocation {
 
   @override
   String toUrlString() {
-    return "$latitude,$longitude";
+    var url = "${latitude.toStringAsFixed(4)},${longitude.toStringAsFixed(4)}";
+    return url;
   }
 
   @override
